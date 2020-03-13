@@ -4,8 +4,8 @@
 
 ###Curso Javascript ES6 **(0% a iniciar)**
 
-###Curso NodeJS **(0% a iniciar)**
+### Curso NodeJS **(0% a iniciar)**
 
-###Curso ReactJS **(0% a iniciar)**
+### Curso ReactJS **(0% a iniciar)**
 
-###Curso React Native **(0% a iniciar)**
+### Curso React Native **(0% a iniciar)**
