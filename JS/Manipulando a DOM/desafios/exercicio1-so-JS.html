@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>exercicio 1 so com JS</title>
+    </head>
+    
+    <body>
+
+        <script>
+            // CRIAR O BOTAO
+
+            var button = document.createElement('button');
+            button.setAttribute('class', 'botao');
+            var btnText = document.createTextNode('Gerar Quadrado');
+            button.appendChild(btnText);
+            document.body.appendChild(button);
+
+            // CRIAR A DIV COM OS QUADRADOS
+
+            button.onclick = function() {
+                var square = document.createElement('div');
+                square.setAttribute('class', 'box');
+                square.style.width = 100;
+                square.style.height = 100;
+                square.style.backgroundColor = '#00BFFF';
+                document.body.appendChild(square);
+            }
+        
+        </script>
+    </body>
+</html>

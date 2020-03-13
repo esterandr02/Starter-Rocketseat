@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>exercicio 1 com html</title>
+    </head>
+
+    <body>
+        <div id="app">
+            <button class="botao">Gerar Quadrados</button>
+        </div>
+
+        <script>
+            var btnElement = document.querySelector('button.botao');
+            
+            // injetar uma div no html, a cada vez que acessar o botao
+
+            btnElement.onclick = function() {  
+                var square = document.createElement('div'); 
+                square.setAttribute('class', 'box');
+                square.style.width = 100;
+                square.style.height = 100;
+                square.style.backgroundColor = '#CD5C5C';
+                document.body.appendChild(square);
+            }
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Manipulando a DOM</title>
+    </head>
+    <body>
+        <div id="app">
+            <button onclick="printOnScreen1()">Click Here</button>
+        </div>
+
+        <div id="app">
+            <button onmouseover="printOnScreen2()">Move the mouse on Here</button>
+        </div>
+        
+        <script>
+            function printOnScreen1() {
+                alert('You click on the buttom, and call the function on the script!');
+            }
+
+            function printOnScreen2() {
+                alert('You moved the mouse on the buttom!');
+            }
+        </script>
+    </body>
+</html>

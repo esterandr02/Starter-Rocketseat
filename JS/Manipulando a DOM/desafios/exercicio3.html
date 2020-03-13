@@ -1,0 +1,37 @@
+<html>
+    <header>
+        <meta charset="UTF-8">
+        <title>exercicio 3</title>
+    </header>
+    
+    <body>
+        <div id="writeName">
+            <input type="text" name="entrada" />
+            <button class="adicionar">Adicionar</button>
+        </div>
+        <div id="list"></div>
+
+        <script>
+            var getText = document.querySelector('input');              // selecionar o input
+            var getButton = document.querySelector('button.adicionar'); // pegar o botao
+            var ulList = document.getElementById('list');
+
+            getButton.onclick = function() {                            // acionar o botao com um click
+                var topic = document.createElement('li');
+                topic.appendChild(document.createTextNode(getText.value));  // criar um topico da lista
+
+                var deleteLink = document.createElement('a');           // link para deletar um item
+                deleteLink.setAttribute('href', '#');
+                deleteLink.appendChild(document.createTextNode(' (delete)'));  // adicionar o nome 'delete' no link
+                topic.appendChild(deleteLink);                          // adicionar o delete no topico criado
+                
+                document.querySelector('input').value = "";             // limpar o input
+                ulList.appendChild(topic);                  // inserir o novo topico criado no html (div id=list)
+            
+                deleteLink.onclick = function() {
+                    ulList.removeChild(topic);            // ao clicar no delete, acionar a remocao do item
+                }
+            }
+        </script>
+    </body>
+</html>

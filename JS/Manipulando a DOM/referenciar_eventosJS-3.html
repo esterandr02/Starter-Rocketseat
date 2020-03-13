@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Criando elementos com o JS</title>
+    </head>
+    <body>
+        <div id="app">
+            <input id="name" />
+        </div>
+
+        <script>
+            var linkElement = document.createElement('a');
+            linkElement.setAttribute('href', 'https://github.com/esterandr02');
+
+            linkElement.appendChild(document.createTextNode('Acessar github da Dev da page')); // adicionar o textElement para o link
+
+            var conteinerElement = document.querySelector('#app');
+            conteinerElement.appendChild(linkElement);
+
+            var input = document.getElementById('name');
+            conteinerElement.removeChild(input);
+
+        </script>
+    </body>
+    
+</html>

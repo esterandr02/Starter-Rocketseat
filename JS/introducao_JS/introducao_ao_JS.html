@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <script>
+            // vetores com os dados dos integrantes
+            var nomes = ['Mirelly', 'Ester', 'Sandra', 'Ivan', 'Meg'];
+            var idade = [10, 20, 47, 58, 2];
+            var sexo = ['F', 'F', 'F', 'M', 'femea'];
+            var peso = [39, 54.5, 56, 67, 10];
+            var humano = [true, true, true, true, false];
+
+            // objeto integrante da familia
+            var integrante = {
+                nome: nomes[1],
+                idade: idade[1],
+                sexo: sexo[1],
+                peso: peso[1],
+                humano: humano[1]
+            };
+
+            console.log(integrante.nome, integrante.idade, integrante.sexo, integrante.peso, integrante.humano);
+
+            // funcoes
+            function eHumano(integrante) {
+                switch (integrante.humano) { // switch eh usado para comparacoes com expressoes fixas.
+                    case true:
+                        return 'eh humano.';
+                    default:
+                        return 'eh cachorrineo :D';
+                }
+            }
+
+            function ehDaFamilia(nome, nomes) {
+                if (nome === nomes[0] || nome === nomes[1] || nome === nomes[2] || nome === nomes[3] || nome === nomes[4]) {
+                    return 'eh da familia.';
+                } else {
+                    return 'eh intruso.'
+                }
+            }
+
+            function ehDeMaior(integrante) {
+                return (integrante.idade > 17) ? 'eh maior de idade' : 'eh menor de idade';
+            }
+            
+            var nome = 'Sergio';
+            var verificacao = ehDaFamilia(nome, nomes);
+            console.log(nome, verificacao);
+
+            // repeticao
+            for (var i = 0; i < 5; i++) {
+
+                integrante.nome = nomes[i];
+                integrante.idade = idade[i];
+                integrante.sexo = sexo[i];
+                integrante.peso = peso[i];
+                integrante.humano = humano[i];
+
+                verificacao = eHumano(integrante);
+                console.log(integrante.nome, verificacao);
+
+                verificacao = ehDeMaior(integrante);
+                console.log(integrante.nome, verificacao);
+            }
+            
+            // intervalo e timeout
+            function exibeNoConsole_1() {
+                console.log('teste 1');
+            }
+
+            function exibeNoConsole_2() {
+                console.log('teste 2');
+            } 
+
+            setInterval(exibeNoConsole_1, 5000); // a cada 5000 ms, ou seja 5 s, a funcao eh executada.
+            setTimeout(exibeNoConsole_2, 5000); // espera 5 s para executa a funcao.
+            
+            // obs: para passar a funcao por referencia, nao usar().
+        </script>
+    </body>
+</html>

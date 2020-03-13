@@ -1,0 +1,46 @@
+<html>
+    <header>
+        <meta charset="UTF-8">
+        <title>Exercicio 2</title>
+    </header>
+
+    <body>
+        <div id="app">
+            <button class="botao">Gerar Quadrados</button>
+        </div>
+
+        <script>
+            var btnElement = document.querySelector('button.botao');
+
+            // MUDAR AS CORES DOS BUTOES
+
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+
+            // injetar uma div no html, a cada vez que acessar o botao
+
+            btnElement.onclick = function() {  
+                var square = document.createElement('div'); 
+                square.setAttribute('class', 'box');
+                square.style.width = 100;
+                square.style.height = 100;
+                square.style.backgroundColor = '#B22222';
+                document.body.appendChild(square);    
+
+                square.onmouseover = function() {
+                    var newColor = getRandomColor();
+                    square.style.backgroundColor = newColor; 
+                }
+            }
+
+
+        </script>
+    </body>
+
+</html>

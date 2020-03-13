@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Referenciando a DOM no JS</title>
+    </head>
+
+    <body>
+        <div id="app">
+            <input type="text" name="entrada1" />
+           <!--  <input type="text" name="entrada2" />  --> 
+            <button class="botao">Adicionar</button>
+        </div>
+
+        <script>
+        // TESTES 
+            //var inputElement = document.querySelector('body div#app input');  // # indica um 'id'
+            //var inputElement2 = document.querySelector('input[name = entrada1]');  // [] referencia uma propriedade do input
+            //var inputElement3 = document.querySelectorAll('input');
+            //console.log(inputElement);
+            // console.log(inputElement2);
+            //console.log(inputElement3);
+
+        // referenciar funcoes de on click pelo JS
+
+            var inputText = document.querySelector('input[name = entrada1]'); // pegar o texto escrito no input
+            var btnElement = document.querySelector('button.botao'); // . para acessar a classe no html
+            
+            btnElement.onclick = function() {
+                var text = inputText.value;   // acessar o conteudo do input
+                alert(text);
+            }
+
+        </script>
+    </body>
+</html>

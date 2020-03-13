@@ -1,0 +1,45 @@
+<html>
+  <head> 
+    <meta charset="UTF-8" />
+    <title>Exercicio 3</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      function printList(nomes, unorderElement) {
+        unordedElement.innerHTML = '';
+
+        for (name of nomes) {
+          var listElement = document.createElement('li');
+          var nameElement = document.createTextNode(name);
+          
+          listElement.appendChild(nameElement);
+          unordedElement.appendChild(listElement);
+        }
+      }
+
+      var divElement = document.querySelector('#app');
+      var inputElement = document.createElement('input');
+      inputElement.setAttribute('type', 'name');
+      inputElement.type = 'text';
+      inputElement.name = 'nome';
+
+      var buttonElement = document.createElement('button');
+      var buttonName = document.createTextNode('Adicionar');
+      buttonElement.appendChild(buttonName);
+      var unordedElement = document.createElement('ul');
+      
+      var nomes = ["Diego", "Gabriel", "Lucas"];
+      divElement.appendChild(inputElement);
+      divElement.appendChild(buttonElement);
+      divElement.appendChild(unordedElement);
+      printList(nomes, unordedElement);
+
+      buttonElement.onclick = function() {
+        nomes.push(inputElement.value)
+        inputElement.value = ''
+        printList(nomes, unordedElement);
+      }
+    </script>
+  </body>
+</html>

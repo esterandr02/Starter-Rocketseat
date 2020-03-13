@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercicio 2</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script>
+      function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+
+      function createBox() {
+        var box = document.createElement('div');
+        box.setAttribute('class', 'box');
+        box.style.width = 100;
+        box.style.height = 100;
+        box.style.backgroundColor = '#f00';
+        
+        box.onmouseover = function() {
+          var newColor = getRandomColor(); // #E943F0
+          box.style.backgroundColor = newColor;
+        };
+
+        return box;
+      }
+
+      function addElement(divElement) {
+        divElement.appendChild(createBox());
+      }
+
+      var button = document.createElement('button');
+      var lbl = document.createTextNode('Click to create a new Box');
+      button.setAttribute('class', 'botao');
+      button.appendChild(lbl);
+
+      var divElement = document.querySelector('#app');
+      divElement.appendChild(button);
+
+      var buttonDiv = document.querySelector('button.botao');
+
+      buttonDiv.onclick = function() {
+        addElement(divElement);
+      };
+    </script>
+  </body>
+</html>

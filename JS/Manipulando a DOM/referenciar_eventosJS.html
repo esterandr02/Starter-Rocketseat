@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Manipulando a DOM</title>
+    </head>
+
+    <body>
+        <div id="app">
+            <input type="txt" name="DOM" id="DOM" class="newclass" />
+            <input type="txt" name="DOM" id="DOM" class="newclass" />
+            <button class="botao">Adicionar texto</button>
+        </div>
+
+        <script>
+            var inputElement = document.getElementById('DOM');
+            //console.log(inputElement);
+
+            var inputElements = document.getElementsByTagName('input')[0]; // retorna um vetor com todos os elementos da tag
+            //console.log(inputElements);
+
+            var inputElements2 = document.getElementsByClassName('newclass');
+            console.log(inputElements2);
+
+        </script>
+    </body>
+
+</html>
