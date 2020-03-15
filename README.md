@@ -1,8 +1,8 @@
-#Curso Iniciante de Desenvolvimento Web
+# Curso Iniciante de Desenvolvimento Web
 
-###Curso de Javascript **(87% concluindo..)**
+### Curso de Javascript **(87% concluindo..)**
 
-###Curso Javascript ES6 **(0% a iniciar)**
+### Curso Javascript ES6 **(0% a iniciar)**
 
 ### Curso NodeJS **(0% a iniciar)**
 
