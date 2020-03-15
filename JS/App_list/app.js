@@ -1,36 +1,50 @@
-var list = document.querySelector('#appList ul');            // pegar o espaco da lista
-var inputText = document.querySelector('#appList input');    // pegar o input
-var button = document.querySelector('#appList button');      // pegar o botao
+var getInput = document.querySelector('#app input');
+var getButton = document.querySelector('#app button');
+var list = document.querySelector('#app ul');
 
-var todos = [];      // vetor que armazena os ToDos
+// ELEMENTOS DA LISTA
+var vecList = JSON.parse(localStorage.getItem('topics')) || [];
+var topicList;
+var text;
+var linkDelete;
+var index;
 
-function renderTodo() {
-    var item = inputText.value;
-    var todoElement = document.createElement('li');            // criar um topico da lista
-    todoElement.appendChild(document.createTextNode(item));    // por o texto nesse topico
-    
-    var linkDelete = document.createElement('a');
-    linkDelete.setAttribute('href', '#');
-    linkDelete.appendChild(document.createTextNode(' (delete)'));
-    todoElement.appendChild(linkDelete);
+function renderList() {
+    list.innerHTML = '';
 
-    list.appendChild(todoElement);                           // injetar na lista no html
+    for (item of vecList) {
+        topicList = document.createElement('li');
+        topicList.appendChild(document.createTextNode(item));
+        
+        linkDelete = document.createElement('a');
+        linkDelete.setAttribute('href', '#');
+        linkDelete.appendChild(document.createTextNode(' (delete)'));
+        
+        index = vecList.indexOf(item);
+        linkDelete.setAttribute('onclick', 'deleteItem('+ index +')'); // '+' para 'item' nao ser passada como string.
 
-    addTodo(item);
-    inputText.value = "";
-
-    linkDelete.onclick = function () {
-        list.removeChild(todoElement);
-        var position;
-
-        for (topic of todos) {
-            position = todos.indexOf(item);
-            todos.splice(position, 1);
-        }
+        topicList.appendChild(linkDelete);
+        list.appendChild(topicList);
     }
-}
-button.onclick = renderTodo;
 
-function addTodo(text) {        // adicionar item ao vetor
-    todos.push(text);
+    //console.log(vecList);   
+}
+
+function addItem() {
+    text = getInput.value;
+    getInput.value = '';
+    vecList.push(text);
+    renderList();
+    saveToStorage();
+}
+getButton.onclick = addItem;
+
+function deleteItem(index) {
+    vecList.splice(index, 1);
+    renderList();
+    saveToStorage();
+}
+
+function saveToStorage() {
+    localStorage.setItem('topics', JSON.stringify(vecList));
 }
