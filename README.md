@@ -1,6 +1,6 @@
 # Curso Iniciante de Desenvolvimento Web
 
-### Curso de Javascript **(100% concluindo..)**
+### Curso de Javascript **(100% concluido)**
 
 ### Curso Javascript ES6 **(0% a iniciar)**
 
