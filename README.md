@@ -2,7 +2,7 @@
 
 ### Curso de Javascript **(100% concluido)**
 
-### Curso Javascript ES6 **(0% a iniciar)**
+### Curso Javascript ES6 **(100% a iniciar)**
 
 ### Curso NodeJS **(0% a iniciar)**
 
