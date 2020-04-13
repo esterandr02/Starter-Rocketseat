@@ -1,11 +1,11 @@
 # Acompanhamento
 
-### Javascript **(100% concluido)**
+### Javascript **(OK)**
 
-### ES6 **(100% consluido)**
+### ES6 **(OK)**
 
-### NodeJS **(0% a iniciar)**
+### NodeJS **(a iniciar)**
 
-### ReactJS **(0% a iniciar)**
+### ReactJS **(a iniciar)**
 
-### React Native **(0% a iniciar)**
+### React Native **(a iniciar)**
