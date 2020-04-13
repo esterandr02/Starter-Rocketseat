@@ -1,11 +1,11 @@
-# Curso Iniciante de Desenvolvimento Web
+# Acompanhamento
 
-### Curso de Javascript **(100% concluido)**
+### Javascript **(100% concluido)**
 
-### Curso Javascript ES6 **(100%)**
+### ES6 **(100% consluido)**
 
-### Curso NodeJS **(0% a iniciar)**
+### NodeJS **(0% a iniciar)**
 
-### Curso ReactJS **(0% a iniciar)**
+### ReactJS **(0% a iniciar)**
 
-### Curso React Native **(0% a iniciar)**
+### React Native **(0% a iniciar)**
