@@ -1,11 +1,11 @@
-# Acompanhamento
+# Stack
 
-### Javascript **(OK)**
+#### Javascript 
 
-### ES6 **(OK)**
+#### ES6 
 
-### NodeJS **(a iniciar)**
+#### NodeJS
 
-### ReactJS **(a iniciar)**
+#### ReactJS
 
-### React Native **(a iniciar)**
+#### React Native
