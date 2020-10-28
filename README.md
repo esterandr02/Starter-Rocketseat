@@ -1,11 +1,11 @@
-# Curso Iniciante de Desenvolvimento Web
+# Stack
 
-### Curso de Javascript **(100% concluido)**
+#### Javascript 
 
-### Curso Javascript ES6 **(100%)**
+#### ES6 
 
-### Curso NodeJS **(0% a iniciar)**
+#### NodeJS
 
-### Curso ReactJS **(0% a iniciar)**
+#### ReactJS
 
-### Curso React Native **(0% a iniciar)**
+#### React Native
